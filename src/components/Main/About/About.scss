@@ -1,0 +1,105 @@
+@import "../../../mixin.scss";
+
+b {
+  color: $ColorBtn_card;
+}
+
+
+
+
+
+.about_title {
+  @include fond(40px, 700);
+  margin: 2rem 0rem;
+  display: flex;
+  @media screen and (min-width: 1000px) {
+    width: 30%;
+    @include fond(
+      calc(40px + (58 - 40) * ((100vw - 320px) / (1920 - 320))),
+      700
+    );
+  }
+}
+
+.about_blockTitle {
+ 
+  p {
+    @include fond(20px, 400);
+    margin: 1rem 0rem;
+    line-height: 130%;
+    @media screen and (min-width: 1000px) {
+      width: 80%;
+      @include fond(calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320))), 400);
+    
+    }
+  }
+}
+
+.about_blockSubTitle {
+
+  margin-top: 4rem;
+  @media screen and (min-width: 600px) {
+    display: flex;
+  }
+  img {
+    width: 100%;
+    @media screen and (min-width: 600px) {
+      width: 30%;
+    }
+    @media screen and (min-width: 1000px) {
+ height: 600px;
+      object-fit: cover;
+    }
+  }
+}
+
+.about_blockText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (min-width: 600px) {
+    margin-left: 15px;
+  }
+  p {
+    border-radius: 10px;
+    border: 1px solid $ColorBtn_card;
+    padding: 15px;
+    @include fond(16px, 400);
+    margin: 15px 0px;
+    line-height: 125%;
+    @media screen and (min-width: 1000px) {
+ width: 350px;
+   @include fond(calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320))), 400);
+    }
+    @media screen and (min-width: 1440px) {
+      width: 500px;
+
+         }
+  }
+}
+
+
+.block_costomers{
+  display: none;
+  @media screen and (min-width: 1000px) {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   flex: 1 1 auto;
+   div{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+   }
+   h3{
+    @include fond(calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320))), 400);
+    
+   }
+   span{
+    @include fond(calc(24px + (34 - 24) * ((100vw - 320px) / (1920 - 320))), 700);
+    color: $ColorBtn_card;
+   }
+  }
+
+}
+

@@ -1,0 +1,87 @@
+@import "../../../mixin.scss";
+
+.Customers_body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  /*   @media (min-width: 1200px) {
+
+
+   } */
+}
+
+.Customers_title {
+  display: flex;
+  margin:0 auto 3rem auto;
+  text-align: center;
+  font-family: initial;
+  align-items: center;
+  justify-content: center;
+  @include fond(40px, 700);
+  font-family: initial;
+  @media (min-width: 768px) {
+    text-align: start;
+    margin-bottom: 0rem;
+    @include fond(
+      calc(40px + (50 - 40) * ((100vw - 320px) / (1920 - 320))),
+      700
+    );
+  }
+  @media (min-width: 1200px) {
+    width: 33%;
+  }
+}
+
+.ForCustomers_wrapper {
+  border-radius: 4px;
+  border: 1px solid $ColorBtn_card;
+  padding: 10px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: transform 0.3s ease;
+
+  @media (min-width: 568px) {
+    width: 45%;
+  }
+  @media (min-width: 1200px) {
+    width: 33%;
+  }
+  &:hover{
+      transform: translateY(-10px)
+
+  }
+}
+
+.ForCustomers_blockTitle {
+  display: flex;
+  align-items: center;
+}
+
+.ForCustomers_title {
+  font-family: initial;
+  @include fond(18px, 700);
+  margin-left: 10px;
+  @media (min-width: 768px) {
+    @include fond(
+      calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320))),
+      700
+    );
+  }
+}
+.ForCustomers_subTitle {
+  margin-top: 5px;
+  line-height: 130%;
+  @include fond(14px, 300);
+  @media (min-width: 768px) {
+    @include fond(
+      calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))),
+      300
+    );
+  }
+}
+
+
+

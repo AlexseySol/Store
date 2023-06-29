@@ -1,0 +1,73 @@
+$backBody: #0a0a0a;
+$colorBlack: #1f1f1f;
+$ColorBtn_card: hsl(33, 88%, 46%);/* #ff8d06; */
+$ColorText: #e3dbe9;
+
+@mixin fond($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $ColorText;
+}
+
+
+
+
+
+
+
+
+
+/* 
+   @include fond(
+        calc(38px + (75 - 38) * ((100vw - 320px) / (1920 - 320))),
+        700
+      );
+
+
+
+      calc(38px + (75 - 38) * ((100vw - 320px) / (1920 - 320)))
+ */
+
+
+
+
+
+
+
+
+
+
+/* $colorTitle: #504178;
+$colorText:#4C3D74;
+
+@mixin fond($size,$line) {
+    font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: $size;
+line-height: $line;
+}
+
+
+@mixin width {
+    width: 90%;
+    margin: 0 auto;
+    @media (min-width:900px) {
+        width: 85%;
+    }
+}
+
+@media (min-width:600px) {
+
+}
+
+@mixin max {
+    width: 40%;
+ 
+    @media (min-width:600px) {
+        width: 70%;
+    }
+    @media (min-width:70px) {
+        width: 70%;
+    }
+} */

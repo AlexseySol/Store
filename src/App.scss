@@ -1,0 +1,19 @@
+@import "./mixin.scss";
+
+
+.container{
+    min-width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @media  (min-width:768px) {
+        min-width: 768px; 
+    }
+    @media  (min-width:1024px) {
+    min-width: 1024px;
+    
+    }
+    @media  (min-width:1440px) {
+        min-width: 1440px;
+        }
+}

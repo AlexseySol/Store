@@ -1,0 +1,158 @@
+@import "../../../mixin.scss";
+
+.nav__wrapper {
+  position: fixed;
+  height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  &::before {
+    content: "";
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 3;
+    @media  (min-width:1440px) {
+        height: 100px;
+        }
+  }
+}
+.nav__container {
+  position: relative;
+  margin: 0 auto;
+  padding: 10px 5px;
+  width: 90%;
+}
+
+.nav__body {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+
+  &::before {
+    position: fixed;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(32, 32, 32);
+    @media (min-width: 768px) {
+      content: none;
+    }
+  }
+  @media (min-width: 768px) {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex: 1 1 auto;
+    left: 0;
+    transition:none;
+  }
+}
+
+.nav__list_body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+  @media (min-width: 768px) {
+    z-index: 3;
+    padding-top: 0px;
+    flex-direction: row;
+    margin-left: 5rem;
+    @media  (min-width:1440px) {
+        margin-left: 10rem;
+    }
+  }
+  li {
+    @include fond(
+      calc(32px + (44 - 32) * ((100vw - 320px) / (768 - 320))),
+      500
+    );
+    margin: 30px 0px 30px 0px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-10px);
+      color: $ColorBtn_card;
+      text-shadow: 1px 1px 1px $ColorText;
+    }
+    @media (min-width: 768px) {
+      margin: 0px 0px 0px 30px;
+      @include fond(
+        calc(14px + (26 - 14) * ((100vw - 320px) / (1920 - 320))),
+        500
+      );
+    }
+  }
+}
+.burger_menu {
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.basket {
+  margin-right: 20px;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+.logo {
+
+  position: relative;
+  z-index: 3;
+  flex: 1 1 auto;
+  
+  img{
+    width: 80px;
+    @media  (min-width:1440px) {
+        width: 140px;
+    }
+  }
+  @media (min-width: 768px) {
+    flex: 0;
+  }
+
+}
+
+.activ {
+  transition: 1s ease-in-out;
+  left: 0;
+  @media (min-width: 768px) {
+    transition: none;
+  }
+
+  li {
+    animation: fadeIn 1.5s ease-in;
+    @media (min-width: 768px) {
+      animation: none;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
